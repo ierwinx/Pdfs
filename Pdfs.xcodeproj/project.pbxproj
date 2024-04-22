@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		AA36BD73255A14AD0007BD3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA36BD72255A14AD0007BD3E /* Assets.xcassets */; };
 		AA36BD76255A14AD0007BD3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA36BD74255A14AD0007BD3E /* LaunchScreen.storyboard */; };
 		AA52ED8D2602706C00C36CC0 /* certificado.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AA52ED8C2602706C00C36CC0 /* certificado.pdf */; };
+		AAC17EE62BD6EDFC00707706 /* NativoPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC17EE42BD6EDFC00707706 /* NativoPDF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AA36BD75255A14AD0007BD3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA36BD77255A14AD0007BD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA52ED8C2602706C00C36CC0 /* certificado.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = certificado.pdf; sourceTree = "<group>"; };
+		AAC17EE42BD6EDFC00707706 /* NativoPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativoPDF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				AA36BD72255A14AD0007BD3E /* Assets.xcassets */,
 				AA36BD74255A14AD0007BD3E /* LaunchScreen.storyboard */,
 				AA36BD77255A14AD0007BD3E /* Info.plist */,
+				AAC17EE42BD6EDFC00707706 /* NativoPDF.swift */,
 			);
 			path = Pdfs;
 			sourceTree = "<group>";
@@ -104,8 +107,9 @@
 		AA36BD5E255A14AA0007BD3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					AA36BD65255A14AA0007BD3E = {
 						CreatedOnToolsVersion = 12.1;
@@ -150,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA36BD6E255A14AA0007BD3E /* ViewController.swift in Sources */,
+				AAC17EE62BD6EDFC00707706 /* NativoPDF.swift in Sources */,
 				AA36BD6A255A14AA0007BD3E /* AppDelegate.swift in Sources */,
 				AA36BD6C255A14AA0007BD3E /* SceneDelegate.swift in Sources */,
 			);
@@ -181,6 +186,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -214,6 +220,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -242,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -275,6 +283,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -299,16 +308,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5933M745D6;
+				DEVELOPMENT_TEAM = 9TPTHP2V2G;
 				INFOPLIST_FILE = Pdfs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bancoazteca.Pdfs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugsoft.Pdfs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,16 +331,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5933M745D6;
+				DEVELOPMENT_TEAM = 9TPTHP2V2G;
 				INFOPLIST_FILE = Pdfs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bancoazteca.Pdfs;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugsoft.Pdfs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
